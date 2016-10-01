@@ -1,5 +1,6 @@
 <WorkspaceItem ctype="Workspace">
   <Items>
     <Item>Strategy/Strategy.sln</Item>
+    <Item>Facade/Facade.sln</Item>
   </Items>
 </WorkspaceItem>
