@@ -1,3 +1,5 @@
 <WorkspaceItem ctype="Workspace">
-  <Items />
+  <Items>
+    <Item>Strategy/Strategy.sln</Item>
+  </Items>
 </WorkspaceItem>
