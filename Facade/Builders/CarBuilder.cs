@@ -2,6 +2,7 @@
 using Facade.Engines;
 using Facade.Bodies;
 using Facade.Accessories;
+using System;
 
 namespace Facade.Builders
 {
@@ -14,6 +15,20 @@ namespace Facade.Builders
 
 		public CarBuilder()
 		{
+			model = new CarModel();
+			engine = new CarEngine();
+			body = new CarBody();
+			accessories = new CarAccessories();
+		}
+
+		public void CreateCompleteCar()
+		{
+			Console.WriteLine("******** Creating a Car. **********");
+			model.SetModel();
+			engine.SetEngine();
+			body.SetBody();
+			accessories.SetAccessories();
+			Console.WriteLine("******** Car creation is completed. **********");
 		}
 	}
 }

@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Facade.Builders;
 
 namespace Facade
 {
@@ -6,7 +6,8 @@ namespace Facade
 	{
 		public static void Main(string[] args)
 		{
-			Console.WriteLine("Hello Facade!");
+			var carBuilder = new CarBuilder();
+			carBuilder.CreateCompleteCar();
 		}
 	}
 }
