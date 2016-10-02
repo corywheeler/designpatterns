@@ -34,6 +34,18 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Builders\CarBuilder.cs" />
+    <Compile Include="Models\CarModel.cs" />
+    <Compile Include="Engines\CarEngine.cs" />
+    <Compile Include="Bodies\CarBody.cs" />
+    <Compile Include="Accessories\CarAccessories.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Builders\" />
+    <Folder Include="Models\" />
+    <Folder Include="Engines\" />
+    <Folder Include="Bodies\" />
+    <Folder Include="Accessories\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
