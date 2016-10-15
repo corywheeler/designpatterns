@@ -3,5 +3,6 @@
     <Item>Strategy/Strategy.sln</Item>
     <Item>Facade/Facade.sln</Item>
     <Item>Flyweight/Flyweight.sln</Item>
+    <Item>Prototype/Prototype.sln</Item>
   </Items>
 </WorkspaceItem>
