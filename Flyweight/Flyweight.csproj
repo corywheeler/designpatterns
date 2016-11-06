@@ -34,6 +34,11 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="EnMoneyType.cs" />
+    <Compile Include="IMoney.cs" />
+    <Compile Include="MetallicMoney.cs" />
+    <Compile Include="PaperMoney.cs" />
+    <Compile Include="MoneyFactory.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
