@@ -6,12 +6,12 @@ namespace Flyweight
 	{
 		public static void Main(string[] args)
 		{
-			const int ONE_MILLION = 1000000000;
+			const int ONE_THOUSAND = 1000;
 			int[] currencyDenominations = new[] {1, 5, 10, 20, 50, 100 };
 			MoneyFactory moneyFactory = new MoneyFactory();
 			int sum = 0;
 
-			while (sum <= ONE_MILLION)
+			while (sum <= ONE_THOUSAND)
 			{
 				IMoney graphicalMoneyObj = null;
 				Random rand = new Random();
@@ -27,7 +27,7 @@ namespace Flyweight
 				}
 
 				graphicalMoneyObj.GetDisplayOfMoneyFalling(currencyDisplayValue);
-				sum += sum + currencyDisplayValue;
+				sum += 1;
 			}
 
 			Console.WriteLine("Total Objects Created = " + MoneyFactory.ObjectsCount.ToString());
