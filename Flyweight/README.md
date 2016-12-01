@@ -6,3 +6,9 @@
   * It only creates one instance of a Flyweight object. 
   * That happens the first time a particular type of Flyweight is requested (EnMoneyType.Metallic vs EnMoneyType.Paper). 
   * Each successive request for that same type of flyweight gives back the already initialized version of that Flyweight object.
+
+* Flyweight objects are described by having two different states:
+  * Intrinsic State
+    * This is referenced by calling MoneyType on an IMoney instance
+  * Extrinsic State
+    * This is referenced by calling GetDisplayOfMoneyFalling on an IMoney instance
