@@ -4,5 +4,6 @@
     <Item>Facade/Facade.sln</Item>
     <Item>Flyweight/Flyweight.sln</Item>
     <Item>Prototype/Prototype.sln</Item>
+    <Item>CircuitBreaker/CircuitBreaker.sln</Item>
   </Items>
 </WorkspaceItem>
