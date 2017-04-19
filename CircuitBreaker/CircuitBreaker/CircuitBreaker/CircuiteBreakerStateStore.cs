@@ -37,14 +37,17 @@ namespace CircuitBreaker
 			currentState = CircuitBreakerStateEnum.HalfOpen;
 		}
 
-		public bool IsClosed()
+		public bool IsClosed
 		{
-			if (currentState == CircuitBreakerStateEnum.Closed)
-				return true;
-			else if (currentState == CircuitBreakerStateEnum.Open || currentState == CircuitBreakerStateEnum.HalfOpen)
-				return false;
-			else
-				return true;
+			get
+			{
+				if (currentState == CircuitBreakerStateEnum.Closed)
+					return true;
+				else if (currentState == CircuitBreakerStateEnum.Open || currentState == CircuitBreakerStateEnum.HalfOpen)
+					return false;
+				else
+					return true;
+			}
 		}
 
 		public void Reset()

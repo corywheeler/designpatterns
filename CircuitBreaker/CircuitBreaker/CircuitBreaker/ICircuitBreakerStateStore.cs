@@ -16,6 +16,6 @@ namespace CircuitBreaker
 
 		void HalfOpen();
 
-		bool IsClosed();
+		bool IsClosed { get; }
 	}
 }

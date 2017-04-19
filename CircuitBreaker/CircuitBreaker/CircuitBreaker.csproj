@@ -37,6 +37,9 @@
     <Compile Include="CircuitBreaker\ICircuitBreakerStateStore.cs" />
     <Compile Include="CircuitBreaker\CircuitBreakerStateEnum.cs" />
     <Compile Include="CircuitBreaker\CircuiteBreakerStateStore.cs" />
+    <Compile Include="CircuitBreaker\CircuitBreaker.cs" />
+    <Compile Include="CircuitBreaker\CircuitBreakerStoreFactory.cs" />
+    <Compile Include="CircuitBreaker\CircuitBreakerOpenException.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CircuitBreaker\" />
