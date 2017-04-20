@@ -38,3 +38,9 @@ Thumbs.db
 
 # dotCover
 *.dotCover
+
+# node
+node_modules
+
+# WebStorm
+.idea
