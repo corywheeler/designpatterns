@@ -1,6 +1,6 @@
 # Circuit Breaker
 
-I've been interested in playing around with this pattern for quite a while. This has basically come from [this article from Microsoft](https://docs.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker#example). What you will find here is
+I've been interested in playing around with this pattern for quite a while. This has basically come from [this article from Microsoft](https://docs.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker#example) code wise. What you will find here is
 pretty much what you will find in that article.
 
 You will also find the ability to run the driver program found in Program.cs under the CircuitBreaker project directory against a server you will find in the [designpatterns/server](https://github.com/corywheeler/designpatterns/tree/master/server) directory. This is a small Node Express server that I created so
