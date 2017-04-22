@@ -3,10 +3,10 @@
 I've been interested in playing around with this pattern for quite a while. This has basically come from [this article from Microsoft](https://docs.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker#example). What you will find here is
 pretty much what you will find in that article.
 
-You will also find the ability to run the driver program found in Program.cs under the CircuitBreaker project directory against a server you will find in the [designpatterns/server](https://github.com/corywheeler/designpatterns/tree/circuit-breaker/server) directory. This is a small Node Express server that I created so
+You will also find the ability to run the driver program found in Program.cs under the CircuitBreaker project directory against a server you will find in the [designpatterns/server](https://github.com/corywheeler/designpatterns/tree/master/server) directory. This is a small Node Express server that I created so
 that you can see the Circuit Breaker in action. After all, what is a Circuit Breaker if you can't see it's behavior as it executes. Having Node installed is therefor a pre-requisite for seeing it in action, you can find the latest version [here](https://nodejs.org/en/download/).
 
-To Run the Node server, open up a terminal and put yourself in the [designpatterns/server](https://github.com/corywheeler/designpatterns/tree/circuit-breaker/server) directory. If it's your first time running the server, you'll need to install all of the servers dependencies with:
+To Run the Node server, open up a terminal and put yourself in the [designpatterns/server](https://github.com/corywheeler/designpatterns/tree/master/server) directory. If it's your first time running the server, you'll need to install all of the servers dependencies with:
 
 ```npm install```
 
@@ -14,7 +14,7 @@ After that you should be set up to run the server with:
 
 ```npm start```
 
-Once the server is up and running, kick off the Program.cs driver for the Circuit Breaker found in the [designpatterns/CircuitBreaker/CircuitBreaker/](https://github.com/corywheeler/designpatterns/blob/circuit-breaker/CircuitBreaker/CircuitBreaker/Program.cs) directory.
+Once the server is up and running, kick off the Program.cs driver for the Circuit Breaker found in the [designpatterns/CircuitBreaker/CircuitBreaker/](https://github.com/corywheeler/designpatterns/tree/master/CircuitBreaker/CircuitBreaker) directory.
 
 ## Server Output
 
