@@ -34,7 +34,7 @@ Circuit Breaker Request #9
 
 ## Circuit Breaker Driver Output
 
-Similarly, in the Program.cs driver program you should see output similar to the following. If you look at the very bottom of that output you'll see the total number of times that the driver program wanted to make to the remote service and the total number of tries the Circuit Breaker allowed.:
+Similarly, in the Program.cs driver program you should see output similar to the following. If you look at the very bottom of that output you'll see the total number of times that the driver program wanted to make to the remote service and the total number of tries the Circuit Breaker allowed.
 
 ```
 Attempting call #1 to server.
