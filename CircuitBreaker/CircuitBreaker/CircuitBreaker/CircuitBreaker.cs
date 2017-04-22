@@ -8,7 +8,7 @@ namespace CircuitBreaker
 		private readonly ICircuitBreakerStateStore stateStore =
 			CircuitBreakerStoreFactory.GetCircuitBreakerStateStore();
 		private readonly object halfOpenSyncObject = new object();
-		private TimeSpan OpenToHalfOpenWaitTime = new TimeSpan(0, 1, 0);
+		private TimeSpan OpenToHalfOpenWaitTime = new TimeSpan(0, 0, 40);
 
 		public bool IsClosed { get { return stateStore.IsClosed; } }
 
@@ -25,8 +25,8 @@ namespace CircuitBreaker
 				// check for the HalfOpen state that had be set by some other operation.
 				if (stateStore.LastStateChangedDateUtc + OpenToHalfOpenWaitTime < DateTime.UtcNow)
 				{
-
-					Console.WriteLine("We have waited long enough");
+					Console.WriteLine("\nThe Open timout has expired.");
+					Console.WriteLine("We have waited long enough. Trying again.");
 
 					// The Open timeout has expired. Allow one operation to execute. Note that, in
 					// this example, the circuit breaker is set to HalfOpen after being
@@ -79,18 +79,20 @@ namespace CircuitBreaker
 				// The Open timeout hasn't yet expired. Throw a CircuitBreakerOpen exception to
 				// inform the caller that the call was not actually attempted,
 				// and return the most recent exception received.
-				throw new CircuitBreakerOpenException(stateStore.LastException);
+				throw new CircuitBreakerOpenException("Call to remote system delayed while Circuit is Open." + 
+				                                      "\nLast Exception was:\n", stateStore.LastException);
 
 			}
 
 			// The Circuit Breaker is Closed, execute the action
 			try
 			{
-				Console.WriteLine("The Circuit Breaker is Closed, executing the action");
+				Console.WriteLine("The Circuit Breaker is Closed, executing the action.");
 				action();
 			}
 			catch (Exception ex)
 			{
+				Console.WriteLine("The Circuit Breaker Caught an Exception, tripping the Circuit now.");
 				// If an exception still occurs here, simply
 				// retrip the breaker immediately
 				this.TrackException(ex);

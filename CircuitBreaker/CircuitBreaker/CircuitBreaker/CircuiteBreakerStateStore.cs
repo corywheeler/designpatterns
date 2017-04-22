@@ -3,7 +3,7 @@ namespace CircuitBreaker
 {
 	public class CircuiteBreakerStateStore : ICircuitBreakerStateStore
 	{
-		private CircuitBreakerStateEnum currentState;
+		private CircuitBreakerStateEnum currentState = CircuitBreakerStateEnum.Closed;
 		private Exception lastException;
 		private DateTime lastStateChangedDateUtc;
 

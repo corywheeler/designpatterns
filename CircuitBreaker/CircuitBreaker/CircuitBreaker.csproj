@@ -30,6 +30,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="RestSharp">
+      <HintPath>..\packages\RestSharp.105.2.3\lib\net45\RestSharp.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
@@ -40,9 +43,13 @@
     <Compile Include="CircuitBreaker\CircuitBreaker.cs" />
     <Compile Include="CircuitBreaker\CircuitBreakerStoreFactory.cs" />
     <Compile Include="CircuitBreaker\CircuitBreakerOpenException.cs" />
+    <Compile Include="CircuitBreaker\BadRequestException.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CircuitBreaker\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
