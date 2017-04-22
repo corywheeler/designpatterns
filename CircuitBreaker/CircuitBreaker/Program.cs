@@ -15,7 +15,9 @@ namespace CircuitBreaker
 
 			var client = new RestClient(serverAddress);
 			var request = new RestRequest("circuit-breaker", Method.GET);
+
 			var breaker = new CircuitBreaker();
+
 			var desiredCallsToRemoteServer = 30;
 			var actualCallsToRemoteServer = 0;
 
