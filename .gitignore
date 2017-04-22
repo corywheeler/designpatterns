@@ -41,6 +41,7 @@ Thumbs.db
 
 # node
 node_modules
+npm-debug.log
 
 # WebStorm
 .idea
